@@ -1,7 +1,7 @@
-
 import PendingCard from '../PendingCard/PendingCard';
 import React, { useState, useEffect } from 'react';
 import Draggable from 'react-draggable';
+import CreatePending from '../CreatePending/CreatePending';
 
 const Home = () => {
 
@@ -37,6 +37,12 @@ const Home = () => {
         setPendings(savedPendings);
     }
 
+    const addPendingToList = (pendingForm) => {
+        let pendingsAdded = pendings.concat(pendingForm);
+        console.log('added', pendingsAdded);
+        setPendings(pendingsAdded);
+    }
+
     const showListPendings = () => {
         return pendings.map(pendingObject => {
           return <Draggable key = { pendingObject._id }  nodeRef={nodeRef}>
@@ -60,6 +66,7 @@ const Home = () => {
                         <strong>Loading...</strong>
                     </div>
                 : <div className="d-flex flex-row" style={{marginTop: '20px', marginLeft: '30px'}}> 
+                    <CreatePending addPending={addPendingToList} lengthPendings={pendings.length}></CreatePending>
                     {showListPendings()} 
                 </div>
             }
