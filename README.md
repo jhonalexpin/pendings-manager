@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Getting Started with Pendings Manager React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is using React framework, I have choosen this framework because it is pretty easy to understand and very light. The functional programming implementation is straightforward to implement as well, that's a good advantage to understand the code and the rederizing of the compoments and managing the DOM is more faster and more useful to apply.
 
 ## Available Scripts
 
